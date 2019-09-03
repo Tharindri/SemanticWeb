@@ -1,0 +1,897 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.hospital.com/ontologies/hospital.owl#"
+     xml:base="http://www.hospital.com/ontologies/hospital.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.hospital.com/ontologies/hospital.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#DepartmentIsFacilitated -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#DepartmentIsFacilitated">
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#isFacilitated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#EventTypeIsFacilitated -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#EventTypeIsFacilitated">
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#isFacilitated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#LaboratoryIsFacilitated -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#LaboratoryIsFacilitated">
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#isFacilitated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#LocationIsFacilitated -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#LocationIsFacilitated">
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#isFacilitated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#PharmacyIsFacilitated -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#PharmacyIsFacilitated">
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#isFacilitated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#QualityIsFacilitated -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#QualityIsFacilitated">
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#isFacilitated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#TreatmentTypeIsFacilitated -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#TreatmentTypeIsFacilitated">
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#isFacilitated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasDepartment">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+        <rdfs:domain rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#hasfacility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasEventType -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasEventType">
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#hasfacility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasLaboratory -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasLaboratory">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+        <rdfs:range rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Laboratory"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#hasfacility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasLocation">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+        <rdfs:range rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Location"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#hasfacility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasPharmacy -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasPharmacy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+        <rdfs:range rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Pharmacy"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#hasfacility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasQuality">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+        <rdfs:range rdf:resource="http://www.hospital.com/ontologies/hospital.owl#QualityPartition"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#hasfacility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasTreatmentType -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasTreatmentType">
+        <rdfs:subPropertyOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#hasfacility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasfacility -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasfacility"/>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#isFacilitated -->
+
+    <owl:ObjectProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#isFacilitated">
+        <owl:inverseOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#hasfacility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasAddress">
+        <rdfs:domain rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasImage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasImage">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasRating">
+        <rdfs:domain rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#hasTelephoneNo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hospital.com/ontologies/hospital.owl#hasTelephoneNo">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#AdministrationStaff -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#AdministrationStaff">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Appointment -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Appointment">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Cafeteria -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Cafeteria">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#ExternalService"/>
+        <owl:disjointWith rdf:resource="http://www.hospital.com/ontologies/hospital.owl#KidsPlayarea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Cardiology -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Cardiology">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Chemical -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Chemical">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Laboratory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Colombo -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Colombo">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Consultation -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Consultation">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Dental -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Dental">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Department -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Dietitian -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Dietitian">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#OperationStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Doctor -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Doctor">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#OperationStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#EChannelling -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#EChannelling">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#ER -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#ER">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Event -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Event"/>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#ExternalService -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#ExternalService"/>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Galle -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Galle">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Gampaha -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Gampaha">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Government -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Government">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#High -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#High">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#QualityPartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Hospital -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#ICU -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#ICU">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Inpatient -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Inpatient">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Kalutara -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Kalutara">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Kandy -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Kandy">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#KidsPlayarea -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#KidsPlayarea">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#ExternalService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Kurunegala -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Kurunegala">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#LabTechnician -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#LabTechnician">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#TechnicalStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Laboratory -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Laboratory"/>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Location -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Location"/>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Low -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Low">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#QualityPartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#MachineryTechnician -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#MachineryTechnician">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#TechnicalStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#MachineryTechnologist -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#MachineryTechnologist">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#TechnicalStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Matara -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Matara">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Maternity -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Maternity">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Medium -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Medium">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#QualityPartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#MicroBiology -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#MicroBiology">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Laboratory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Nurse -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Nurse">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#OperationStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#OPD -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#OPD">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#OperationStaff -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#OperationStaff">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#OtherAdministrationStaff -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#OtherAdministrationStaff">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#AdministrationStaff"/>
+        <owl:disjointWith rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Receptionist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Paediatric -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Paediatric">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Patient -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Patient">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Person"/>
+        <owl:disjointWith rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Person -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Person"/>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Pharmacist -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Pharmacist">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Pharmacy -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Pharmacy"/>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Physician -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Physician">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Physiotherapy -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Physiotherapy">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Prescription -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Prescription">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Private -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Private">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#QualityPartition -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#QualityPartition"/>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Radiology -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Radiology">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Laboratory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Receptionist -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Receptionist">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#AdministrationStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Scanning -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Scanning">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Laboratory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#SemiGovernment -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#SemiGovernment">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Hospital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Staff -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Surgery -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Surgery">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Surgical -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Surgical">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#TechnicalStaff -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#TechnicalStaff">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Test -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Test">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Therapist -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Therapist">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#OperationStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Treatment -->
+
+    <owl:Class rdf:about="http://www.hospital.com/ontologies/hospital.owl#Treatment">
+        <rdfs:subClassOf rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Asiri_Central -->
+
+    <owl:NamedIndividual rdf:about="http://www.hospital.com/ontologies/hospital.owl#Asiri_Central">
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Cafeteria"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Department"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#EChannelling"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Event"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#High"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Laboratory"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Pharmacy"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Private"/>
+        <rdfs:label rdf:datatype="&xsd;string">Asiri Central</rdfs:label>
+        <hasTelephoneNo rdf:datatype="&xsd;string">0114 665 500</hasTelephoneNo>
+        <hasAddress rdf:datatype="&xsd;string">114 Norris Canal Rd, Colombo-01000</hasAddress>
+        <hasRating rdf:datatype="&xsd;string">4.5</hasRating>
+        <hasImage rdf:datatype="&xsd;string">http://s3.amazonaws.com/bizenglish/wp-content/uploads/2019/02/19115215/Hemas-Hospital-Thalawathugoda-2.jpg</hasImage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Hemas_Hospital -->
+
+    <owl:NamedIndividual rdf:about="http://www.hospital.com/ontologies/hospital.owl#Hemas_Hospital">
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#EChannelling"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Private"/>
+        <rdfs:label rdf:datatype="&xsd;string">Hemas Hospital</rdfs:label>
+        <hasTelephoneNo rdf:datatype="&xsd;string">0117888888</hasTelephoneNo>
+        <hasAddress rdf:datatype="&xsd;string">107, Temple rd, Wattala</hasAddress>
+        <hasRating rdf:datatype="&xsd;string">3.9</hasRating>
+        <hasAddress rdf:datatype="&xsd;string">389 Negombo-Colombo Main Rd, Wattala 11300</hasAddress>
+        <hasImage rdf:datatype="&xsd;string">http://static.ft.lk/ftadmin/wp-content/files_mf/1470936306s3.jpg</hasImage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#National_Hospital -->
+
+    <owl:NamedIndividual rdf:about="http://www.hospital.com/ontologies/hospital.owl#National_Hospital">
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Consultation"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Government"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#High"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Inpatient"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Test"/>
+        <rdfs:label rdf:datatype="&xsd;string">National Hospital</rdfs:label>
+        <hasTelephoneNo rdf:datatype="&xsd;string">0112 691 111</hasTelephoneNo>
+        <hasRating rdf:datatype="&xsd;string">4.4</hasRating>
+        <hasAddress rdf:datatype="&xsd;string">Colombo 00700</hasAddress>
+        <hasImage rdf:datatype="&xsd;string">http://www.health.gov.lk/enWeb/images/stories/Picture7.jpg</hasImage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hospital.com/ontologies/hospital.owl#Sethma -->
+
+    <owl:NamedIndividual rdf:about="http://www.hospital.com/ontologies/hospital.owl#Sethma">
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Appointment"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Chemical"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Consultation"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Inpatient"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Low"/>
+        <rdf:type rdf:resource="http://www.hospital.com/ontologies/hospital.owl#Private"/>
+        <rdfs:label rdf:datatype="&xsd;string">Sethma</rdfs:label>
+        <hasTelephoneNo rdf:datatype="&xsd;string">0335 626 626</hasTelephoneNo>
+        <hasRating rdf:datatype="&xsd;string">2.8</hasRating>
+        <hasAddress rdf:datatype="&xsd;string">No: 36, Marybiso Rd, Gampaha 11000</hasAddress>
+        <hasImage rdf:datatype="&xsd;string">https://i1.wp.com/www.uplist.lk/wp-content/uploads/2017/11/sethma-hospital-gampaha-vacancies.jpg?ssl=1</hasImage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Patient"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Physician"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Staff"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#AdministrationStaff"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#OperationStaff"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Pharmacist"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#TechnicalStaff"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Government"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Private"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#SemiGovernment"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Dietitian"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Doctor"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Nurse"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Therapist"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Chemical"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#MicroBiology"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Radiology"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Scanning"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Cardiology"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Dental"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#ER"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#ICU"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Maternity"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#OPD"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Paediatric"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Physiotherapy"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Surgery"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#LabTechnician"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#MachineryTechnician"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#MachineryTechnologist"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#High"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Low"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Colombo"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Galle"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Gampaha"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Kalutara"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Kandy"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Kurunegala"/>
+            <rdf:Description rdf:about="http://www.hospital.com/ontologies/hospital.owl#Matara"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
